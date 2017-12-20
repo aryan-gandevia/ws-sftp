@@ -1,0 +1,72 @@
+PATH
+  remote: .
+  specs:
+    ws-sftp (0.0.1)
+      net-sftp (~> 2.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ast (2.3.0)
+    bundler-audit (0.6.0)
+      bundler (~> 1.2)
+      thor (~> 0.18)
+    coderay (1.1.2)
+    diff-lcs (1.3)
+    method_source (0.9.0)
+    net-sftp (2.1.2)
+      net-ssh (>= 2.6.5)
+    net-ssh (4.1.0)
+    parallel (1.12.0)
+    parser (2.4.0.2)
+      ast (~> 2.3)
+    powerpack (0.1.1)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    rainbow (3.0.0)
+    rspec (3.7.0)
+      rspec-core (~> 3.7.0)
+      rspec-expectations (~> 3.7.0)
+      rspec-mocks (~> 3.7.0)
+    rspec-collection_matchers (1.1.3)
+      rspec-expectations (>= 2.99.0.beta1)
+    rspec-core (3.7.0)
+      rspec-support (~> 3.7.0)
+    rspec-expectations (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-its (1.2.0)
+      rspec-core (>= 3.0.0)
+      rspec-expectations (>= 3.0.0)
+    rspec-mocks (3.7.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.7.0)
+    rspec-support (3.7.0)
+    rubocop (0.52.0)
+      parallel (~> 1.10)
+      parser (>= 2.4.0.2, < 3.0)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.9.0)
+    thor (0.20.0)
+    unicode-display_width (1.3.0)
+    ws-style (0.1.2)
+      rubocop (~> 0.49)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler-audit
+  pry
+  rspec
+  rspec-collection_matchers
+  rspec-its
+  ws-sftp!
+  ws-style
+
+BUNDLED WITH
+   1.16.0
