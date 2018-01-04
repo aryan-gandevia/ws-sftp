@@ -17,8 +17,8 @@ module Ws
     end
 
     class Configuration
-      ATTRIBUTES = [:host, :username, :password]
-      attr_accessor *ATTRIBUTES
+      ATTRIBUTES = [:host, :username, :password].freeze
+      attr_accessor(*ATTRIBUTES)
 
       def validate!
         raise "Invalid or missing configuration" unless ATTRIBUTES.all? { |attr| send(attr).present? }

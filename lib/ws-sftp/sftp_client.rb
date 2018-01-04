@@ -1,7 +1,7 @@
 module Ws
   module SFTP
     class Client
-      def write(path, content, chunk_size: 25000)
+      def write(path, content, chunk_size: 25_000)
         start_session do |session|
           session.file.open(path, 'w') do |f|
             chunk(content, chunk_size).each do |chunk|
@@ -15,7 +15,7 @@ module Ws
         start_session do |session|
           session.file.open(path, 'r') do |f|
             contents = ''
-            while line = f.gets
+            while (line = f.gets)
               contents << line
             end
             return contents
@@ -54,7 +54,7 @@ module Ws
       def options
         {
           password: SFTP.configuration.password,
-          non_interactive: true
+          non_interactive: true,
         }
       end
 

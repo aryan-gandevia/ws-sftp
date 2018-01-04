@@ -1,8 +1,8 @@
 describe Ws::SFTP::Client do
   before(:each) { use_default_configuration! }
 
-  let(:dir) { double() }
-  let(:file) { double() }
+  let(:dir) { double }
+  let(:file) { double }
   let(:session) { double(Net::SFTP::Session, dir: dir, file: file) }
 
   before do
@@ -16,8 +16,8 @@ describe Ws::SFTP::Client do
     it "will list contents of a direcotry" do
       allow(dir).to receive(:foreach).and_yield(filename1).and_yield(filename2)
 
-      expect(subject.ls().count).to eq(2)
-      expect(subject.ls()).to eq([ filename1.name, "#{filename2.name}/"])
+      expect(subject.ls.count).to eq(2)
+      expect(subject.ls).to eq([filename1.name, "#{filename2.name}/"])
     end
   end
 
@@ -28,7 +28,7 @@ describe Ws::SFTP::Client do
       allow(file).to receive(:open).and_yield(test_file)
 
       files = []
-      subject.each_file(['/test', '/test2']) { |path, content| files << content }
+      subject.each_file(['/test', '/test2']) { |_, content| files << content }
 
       expect(files.count).to eq(2)
       expect(files.first).to eq(test_file.read)
