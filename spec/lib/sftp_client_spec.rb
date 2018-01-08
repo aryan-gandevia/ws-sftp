@@ -34,17 +34,4 @@ describe Ws::SFTP::Client do
       expect(files.first).to eq(test_file.read)
     end
   end
-
-  describe '#get_final_path' do
-    let(:base_path) { '/test' }
-    let(:filename) { 'testfile.txt' }
-    subject { described_class.new(base_path: base_path) }
-
-    it "will prepend the base_path" do
-      allow(dir).to receive(:foreach).and_yield(filename)
-      expect(subject).to receive(:ls).and_return("#{base_path}/#{filename}")
-
-      subject.ls
-    end
-  end
 end
