@@ -43,19 +43,19 @@ module Ws
         end
       end
 
-      private
-
-      def start_session
-        Net::SFTP.start(SFTP.configuration.host, SFTP.configuration.username, options) do |session|
-          yield session
-        end
-      end
-
       def glob(path, pattern)
         start_session do |session|
           session.dir.glob(path, pattern) do |match|
             yield match
           end
+        end
+      end
+
+      private
+
+      def start_session
+        Net::SFTP.start(SFTP.configuration.host, SFTP.configuration.username, options) do |session|
+          yield session
         end
       end
 
