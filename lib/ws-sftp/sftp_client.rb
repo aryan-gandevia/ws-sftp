@@ -43,6 +43,14 @@ module Ws
         end
       end
 
+      def glob(path, pattern)
+        start_session do |session|
+          session.dir.glob(path, pattern) do |match|
+            yield match
+          end
+        end
+      end
+
       private
 
       def start_session
