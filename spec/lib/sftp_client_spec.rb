@@ -13,7 +13,7 @@ describe Ws::SFTP::Client do
     let(:filename1) { double(Net::SFTP::Protocol::V01::Name, 'name' => 'file1.csv', 'directory?' => false) }
     let(:filename2) { double(Net::SFTP::Protocol::V01::Name, 'name' => 'dir1', 'directory?' => true) }
 
-    it "will list contents of a direcotry" do
+    it "will list contents of a directory" do
       allow(dir).to receive(:foreach).and_yield(filename1).and_yield(filename2)
 
       expect(subject.ls.count).to eq(2)
