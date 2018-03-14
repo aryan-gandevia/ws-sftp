@@ -2,9 +2,9 @@ module Ws
   module SFTP
     class Client
       def initialize(host: nil, username: nil, password: nil)
-        @host = host || SFTP.configuration.host,
-        @username = username || SFTP.configuration.username,
-        @password = password || SFTP.configuration.password,
+        @host = host
+        @username = username
+        @password = password
       end
 
       def write(path, content, chunk_size: 25_000)

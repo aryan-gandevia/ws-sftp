@@ -1,6 +1,4 @@
 describe Ws::SFTP::Client do
-  before(:each) { use_default_configuration! }
-
   let(:dir) { double }
   let(:file) { double }
   let(:session) { double(Net::SFTP::Session, dir: dir, file: file) }
