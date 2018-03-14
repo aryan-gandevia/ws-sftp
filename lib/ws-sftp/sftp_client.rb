@@ -1,6 +1,12 @@
 module Ws
   module SFTP
     class Client
+      def initialize(host: nil, username: nil, password: nil)
+        @host = host || SFTP.configuration.host,
+        @username = username || SFTP.configuration.username,
+        @password = password || SFTP.configuration.password,
+      end
+
       def write(path, content, chunk_size: 25_000)
         start_session do |session|
           session.file.open(path, 'w') do |f|
@@ -54,14 +60,14 @@ module Ws
       private
 
       def start_session
-        Net::SFTP.start(SFTP.configuration.host, SFTP.configuration.username, options) do |session|
+        Net::SFTP.start(@host, @username, options) do |session|
           yield session
         end
       end
 
       def options
         {
-          password: SFTP.configuration.password,
+          password: @password,
           non_interactive: true,
         }
       end
