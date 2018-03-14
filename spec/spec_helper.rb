@@ -53,11 +53,3 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 end
-
-def use_default_configuration!
-  Ws::SFTP.configure do |config|
-    config.host = 'sftp.wealthsimple.com'
-    config.username = 'foo'
-    config.password = 'bar'
-  end
-end
