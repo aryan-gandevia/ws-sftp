@@ -27,6 +27,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec-collection_matchers"
   gem.add_development_dependency "rspec-its"
   gem.add_development_dependency "bundler-audit"
-  gem.add_development_dependency "ws-gem_publisher"
+  gem.add_development_dependency "ws-gem_publisher", "~> 2"
   gem.add_development_dependency "ws-style"
 end

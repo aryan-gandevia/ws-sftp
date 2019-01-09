@@ -1,1 +1,1 @@
-require 'ws/gem_publisher'
+require 'ws/gem_publisher/tasks'
