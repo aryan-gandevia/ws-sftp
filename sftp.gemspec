@@ -18,6 +18,8 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
+  gem.metadata['allowed_push_host'] = "https://nexus.iad.w10external.com/repository/gems-private"
+
   gem.add_dependency "net-sftp", "~> 2.0"
 
   gem.add_development_dependency "pry"
@@ -25,5 +27,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rspec-collection_matchers"
   gem.add_development_dependency "rspec-its"
   gem.add_development_dependency "bundler-audit"
+  gem.add_development_dependency "ws-gem_publisher"
   gem.add_development_dependency "ws-style"
 end
