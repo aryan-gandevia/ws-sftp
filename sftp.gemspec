@@ -22,11 +22,5 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "net-sftp", "~> 2.0"
 
-  gem.add_development_dependency "pry"
-  gem.add_development_dependency "rspec"
-  gem.add_development_dependency "rspec-collection_matchers"
-  gem.add_development_dependency "rspec-its"
-  gem.add_development_dependency "bundler-audit"
-  gem.add_development_dependency "ws-gem_publisher", "~> 2"
-  gem.add_development_dependency "ws-style"
+  gem.add_development_dependency "ws-gem_publisher", "~> 3"
 end

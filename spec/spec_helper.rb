@@ -1,7 +1,5 @@
-require 'rspec'
-require 'rspec/collection_matchers'
-require 'rspec/its'
-
+require 'bundler/setup'
+require 'ws/gem_publisher/support/spec_helper'
 require_relative '../lib/ws-sftp'
 
 RSpec.configure do |config|
