@@ -49,20 +49,16 @@ module Ws
         end
       end
 
-      def glob(path, pattern)
+      def glob(path, pattern, &block)
         start_session do |session|
-          session.dir.glob(path, pattern) do |match|
-            yield match
-          end
+          session.dir.glob(path, pattern, &block)
         end
       end
 
       private
 
-      def start_session
-        Net::SFTP.start(@host, @username, options) do |session|
-          yield session
-        end
+      def start_session(&block)
+        Net::SFTP.start(@host, @username, options, &block)
       end
 
       def options

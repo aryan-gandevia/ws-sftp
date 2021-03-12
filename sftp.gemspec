@@ -4,23 +4,25 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require "ws-sftp/version"
 
-Gem::Specification.new do |gem|
-  gem.name = %q{ws-sftp}
-  gem.version = Ws::SFTP::VERSION
-  gem.author = "Wealthsimple"
-  gem.summary = %q{Ruby client for accessing SFTP}
-  gem.email = %q{engineering@wealthsimple.com}
-  gem.description   = %q{}
-  gem.summary       = %q{}
-  gem.homepage      = %q{}
-  gem.files         = `git ls-files`.split("\n")
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-  gem.require_paths = ["lib"]
+Gem::Specification.new do |s|
+  raise 'RubyGems 2.0 or newer is required to protect against public gem pushes.' unless s.respond_to?(:metadata)
 
-  gem.metadata['allowed_push_host'] = "https://nexus.iad.w10external.com/repository/gems-private"
+  s.name = %q{ws-sftp}
+  s.version = Ws::SFTP::VERSION
+  s.author = "Wealthsimple"
+  s.summary = %q{Ruby client for accessing SFTP}
+  s.email = %q{engineering@wealthsimple.com}
+  s.description   = %q{}
+  s.summary       = %q{}
+  s.homepage      = %q{}
+  s.files         = `git ls-files`.split("\n")
+  s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  s.test_files    = s.files.grep(%r{^(test|spec|features)/})
+  s.require_paths = ["lib"]
 
-  gem.add_dependency "net-sftp", "~> 2.0"
+  s.metadata['allowed_push_host'] = "https://nexus.iad.w10external.com/repository/gems-private"
 
-  gem.add_development_dependency "ws-gem_publisher", "~> 3"
+  s.add_dependency "net-sftp", "~> 2.0"
+
+  s.add_development_dependency "ws-gem_publisher", "~> 3"
 end
