@@ -1,10 +1,11 @@
 module Ws
   module SFTP
     class Client
-      def initialize(host: nil, username: nil, password: nil)
+      def initialize(host: nil, username: nil, password: nil, options: {})
         @host = host
         @username = username
         @password = password
+        @options = options
       end
 
       def write(path, content, chunk_size: 25_000)
@@ -65,7 +66,7 @@ module Ws
         {
           password: @password,
           non_interactive: true,
-        }
+        }.merge(@options)
       end
 
       def chunk(string, size)
