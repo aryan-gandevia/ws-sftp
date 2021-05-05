@@ -1,4 +1,6 @@
-# ws-sftp [![CircleCI](https://circleci.com/gh/wealthsimple/ws-sftp.svg?style=svg&circle-token=73e96bc4214acc7e31ccbf3f63cb31fd60e40ce2)](https://circleci.com/gh/wealthsimple/ws-sftp) [![Coverage Status](https://coveralls.io/repos/github/wealthsimple/ws-sftp/badge.svg?branch=master&t=p5LgvH)](https://coveralls.io/github/wealthsimple/ws-sftp?branch=master)
+# ws-sftp
+[![GitHub Actions Badge](https://github.com/wealthsimple/ws-sftp/actions/workflows/main.yml/badge.svg)](https://github.com/wealthsimple/ws-sftp/actions)
+
 Wrapper for `net/sftp` to easily communicate with an SFTP server
 
 ## Configure

@@ -23,6 +23,4 @@ Gem::Specification.new do |s|
   s.metadata['allowed_push_host'] = "https://nexus.iad.w10external.com/repository/gems-private"
 
   s.add_dependency "net-sftp", ">= 2", "< 4"
-
-  s.add_development_dependency "ws-gem_publisher", "~> 3"
 end

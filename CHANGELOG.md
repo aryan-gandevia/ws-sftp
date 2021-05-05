@@ -5,6 +5,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## 0.3.1 - 2021-04-16
+### Changed
+- Updated dependencies
+- Migrate CI from CircleCI to GitHub Actions
+- Change default GitHub branch to `main`
+
 ## 0.3.0 - 2021-04-23
 ### Added
 - Add ability to specify additional Net::SFTP options, such as public/private key.
