@@ -1,3 +1,8 @@
 spec/examples.txt
 coverage/
 .rspec_status
+
+## Environment normalization:
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
