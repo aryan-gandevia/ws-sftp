@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://nexus.iad.w10external.com/repository/gems/
   specs:
-    ws-gem_publisher (3.5.5)
+    ws-gem_publisher (3.5.6)
       bundler
       bundler-audit
       byebug
@@ -131,7 +131,7 @@ GEM
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.1.0)
-    ws-style (6.11.0)
+    ws-style (6.11.1)
       rubocop (>= 1.12.1)
       rubocop-performance (>= 1.10.2)
       rubocop-rails (>= 2.9.1)
