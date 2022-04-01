@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://nexus.iad.w10external.com/repository/gems/
   specs:
-    ws-gem_publisher (4.0.1)
+    ws-gem_publisher (4.0.2)
       bundler
       git
       nexus
@@ -116,4 +116,4 @@ DEPENDENCIES
   ws-style
 
 BUNDLED WITH
-   2.2.29
+   2.3.10
