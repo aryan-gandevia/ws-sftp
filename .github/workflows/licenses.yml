@@ -1,10 +1,8 @@
 name: Save licenses report
 
 on:
-  push:
-    branches:
-      - main
-      - master
+  schedule:
+    - cron: '30 6 7 */2 *' # 6:30 am UTC: 1:30 am EST on 7th day of every 2nd month
   workflow_dispatch:
 
 concurrency:
