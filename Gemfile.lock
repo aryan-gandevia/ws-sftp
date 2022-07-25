@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://nexus.iad.w10external.com/repository/gems/
   specs:
-    ws-gem_publisher (4.0.3)
+    ws-gem_publisher (4.0.4)
       bundler
       git
       nexus
@@ -65,14 +65,14 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.0)
-    rubocop (1.31.2)
+    rubocop (1.32.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.18.0, < 2.0)
+      rubocop-ast (>= 1.19.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.19.1)
@@ -96,7 +96,7 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
     thor (1.2.1)
-    tzinfo (2.0.4)
+    tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.2.0)
     ws-style (6.13.25)
