@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ws-sftp (0.3.9)
+    ws-sftp (0.3.10)
       net-sftp (>= 2, < 4)
 
 GEM
