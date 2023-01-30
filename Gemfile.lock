@@ -7,18 +7,19 @@ PATH
 GEM
   remote: https://nexus.iad.w10external.com/repository/gems/
   specs:
-    ws-gem_publisher (4.0.7)
+    ws-gem_publisher (5.0.1)
       bundler
+      faraday
       git
-      nexus
       rake
       simplecov (>= 0.20.0)
       simplecov_json_formatter
+      yaml
 
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.1)
+    activesupport (7.0.4.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -29,9 +30,13 @@ GEM
     bundler-audit (0.9.1)
       bundler (>= 1.2.0, < 3)
       thor (~> 1.0)
-    concurrent-ruby (1.1.10)
+    concurrent-ruby (1.2.0)
     diff-lcs (1.5.0)
     docile (1.4.0)
+    faraday (2.7.4)
+      faraday-net_http (>= 2.0, < 3.1)
+      ruby2_keywords (>= 0.0.4)
+    faraday-net_http (3.0.2)
     git (1.13.1)
       addressable (~> 2.8)
       rchardet (~> 1.8)
@@ -42,7 +47,6 @@ GEM
     net-sftp (4.0.0)
       net-ssh (>= 5.0.0, < 8.0.0)
     net-ssh (7.0.1)
-    nexus (1.4.0)
     parallel (1.22.1)
     parser (3.2.0.0)
       ast (~> 2.4.1)
@@ -69,7 +73,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.0)
-    rubocop (1.43.0)
+    rubocop (1.44.1)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.2.0.0)
@@ -96,6 +100,7 @@ GEM
     rubocop-vendor (0.8.10)
       rubocop (>= 0.53.0)
     ruby-progressbar (1.11.0)
+    ruby2_keywords (0.0.5)
     simplecov (0.22.0)
       docile (~> 1.1)
       simplecov-html (~> 0.11)
@@ -103,7 +108,7 @@ GEM
     simplecov-html (0.12.3)
     simplecov_json_formatter (0.1.4)
     thor (1.2.1)
-    tzinfo (2.0.5)
+    tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
     ws-style (6.14.3)
@@ -112,6 +117,7 @@ GEM
       rubocop-rails (>= 2.9.1)
       rubocop-rspec (>= 2.2.0)
       rubocop-vendor (>= 0.6.0)
+    yaml (0.2.1)
 
 PLATFORMS
   ruby
