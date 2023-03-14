@@ -63,4 +63,27 @@ describe Ws::SFTP::Client do
       expect(files.first).to eq(test_file.read)
     end
   end
+
+  describe '#write' do
+    subject { described_class.new }
+
+    let(:test_file) { double('File', write: true) }
+    let(:test_content) { 'test file contents' }
+
+    it 'will write a file to the remote server' do
+      allow(file).to receive(:open).and_yield(test_file)
+
+      expect(subject.write('/test', test_content)).to be_truthy
+    end
+
+    context 'contents are a StringIO' do
+      let(:test_content) { StringIO.new('test file contents') }
+
+      it 'will write a file to the remote server' do
+        allow(file).to receive(:open).and_yield(test_file)
+
+        expect(subject.write('/test', test_content)).to be_truthy
+      end
+    end
+  end
 end

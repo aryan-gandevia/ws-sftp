@@ -122,7 +122,7 @@ module Ws
       end
 
       def chunk(string, size)
-        string.chars.each_slice(size).map(&:join)
+        string.each_char.each_slice(size).map(&:join)
       end
     end
   end

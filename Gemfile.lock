@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ws-sftp (0.4.0)
+    ws-sftp (0.4.1)
       net-sftp (>= 4.0.0)
 
 GEM
@@ -131,4 +131,4 @@ DEPENDENCIES
   ws-style
 
 BUNDLED WITH
-   2.3.10
+   2.4.7
