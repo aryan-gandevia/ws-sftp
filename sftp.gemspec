@@ -24,6 +24,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency "net-sftp", ">= 4.0.0"
 
+  s.required_ruby_version = '>= 3.0'
+
   s.add_development_dependency 'bundler-audit', '>= 0.9.0'
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'rspec-its'
