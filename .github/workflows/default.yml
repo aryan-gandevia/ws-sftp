@@ -15,9 +15,6 @@ jobs:
   preflight_check:
     name: Preflight Check
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        ruby-version: [3.0.6, 3.1.4, 3.2.2]
     steps:
       # Need to fetch all refs, so we can check if the version has been bumped
       - uses: actions/checkout@v3
@@ -27,7 +24,6 @@ jobs:
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-          ruby-version: ${{ matrix.ruby-version }}
         env:
           BUNDLE_NEXUS__IAD__W10EXTERNAL__COM: ${{ secrets.BUNDLE_NEXUS__IAD__W10EXTERNAL__COM }}
 
