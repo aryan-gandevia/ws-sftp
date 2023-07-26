@@ -15,6 +15,7 @@ Gem::Specification.new do |s|
   s.description   = %q{}
   s.summary       = %q{}
   s.homepage      = %q{}
+  s.metadata['changelog_uri'] = 'https://github.com/wealthsimple/ws-sftp/blob/main/CHANGELOG.md'
   s.files         = `git ls-files`.split("\n")
   s.executables   = s.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
