@@ -15,7 +15,7 @@ describe Ws::SFTP::Client do
       allow(dir).to receive(:foreach).and_yield(filename1).and_yield(filename2)
     end
 
-    it "will list contents of a directory" do
+    it "lists contents of a directory" do
       expect(subject.ls.count).to eq(2)
       expect(subject.ls).to eq([filename1.name, "#{filename2.name}/"])
     end
@@ -43,7 +43,7 @@ describe Ws::SFTP::Client do
         })
       end
 
-      it "will list contents of a directory" do
+      it "lists contents of a directory" do
         expect(subject.ls.count).to eq(2)
         expect(subject.ls).to eq([filename1.name, "#{filename2.name}/"])
       end
@@ -53,7 +53,7 @@ describe Ws::SFTP::Client do
   describe '#each_file' do
     let(:test_file) { double('File', read: 'test file contents') }
 
-    it "will iterate over every path" do
+    it "iterates over every path" do
       allow(file).to receive(:open).and_yield(test_file)
 
       files = []
@@ -70,7 +70,7 @@ describe Ws::SFTP::Client do
     let(:test_file) { double('File', write: true) }
     let(:test_content) { 'test file contents' }
 
-    it 'will write a file to the remote server' do
+    it 'writes a file to the remote server' do
       allow(file).to receive(:open).and_yield(test_file)
 
       expect(subject.write('/test', test_content)).to be_truthy
@@ -79,7 +79,7 @@ describe Ws::SFTP::Client do
     context 'contents are a StringIO' do
       let(:test_content) { StringIO.new('test file contents') }
 
-      it 'will write a file to the remote server' do
+      it 'writes a file to the remote server' do
         allow(file).to receive(:open).and_yield(test_file)
 
         expect(subject.write('/test', test_content)).to be_truthy
