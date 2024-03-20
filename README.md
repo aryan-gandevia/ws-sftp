@@ -1,3 +1,6 @@
+# notice
+Gem created for sftp uploading
+
 # ws-sftp
 [![GitHub Actions Badge](https://github.com/wealthsimple/ws-sftp/actions/workflows/main.yml/badge.svg)](https://github.com/wealthsimple/ws-sftp/actions)
 
