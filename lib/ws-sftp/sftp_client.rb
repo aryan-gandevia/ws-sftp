@@ -108,6 +108,13 @@ module Ws
         end
       end
 
+    def upload_with_handler(local_path, path, options = {}, &block)
+      start_session do |session|
+        uploader = session.upload(local_path, path, options, &block)
+        uploader.wait
+      end
+    end
+
       private
 
       def start_session(&block)
